@@ -7,6 +7,9 @@ const ingredients = [
   "Condiments",
 ];
 
+const itemEl = document.querySelector("ul#ingredients");
+
+let newArrayIngrediends = [];
 
 for (const ingredient of ingredients) {
   const newElement = document.createElement("li");
@@ -15,7 +18,7 @@ for (const ingredient of ingredients) {
 
   newElement.classList.add("item");
 
-  const itemEl = document.querySelector("ul#ingredients");
+  newArrayIngrediends.push(newElement);
 
-  console.log(itemEl.append(newElement));
+  console.log(itemEl.append(...newArrayIngrediends));
 }
